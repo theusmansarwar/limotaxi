@@ -4,7 +4,7 @@ body {
 }
 
 .booking-container {
-  width: fit-content;
+  width:401px;
   margin: 30px auto;
   margin-left: 280px;
   margin-top: 70px;
@@ -420,14 +420,15 @@ body {
 
 /* Extras Section Styles */
 .section.extras {
-  background-color: #f5f5f5;
+  background-color: #e8e8e8;
   border-radius: 8px;
   padding: 20px;
   margin-top: 20px;
+  width: 363px;
 }
 
 .extras h3 {
-  font-size: 16px;
+  font-size: 22px;
   font-weight: 600;
   color: #333;
   margin: 0 0 16px 0;
@@ -499,8 +500,98 @@ body {
   font-size: 13px;
   color: #333;
   flex: 1;
+  width: 70%;
 }
 
 .extras-grid input[type="text"]::placeholder {
   color: #9ca3af;
+}
+/* Action Buttons Section */
+.action-buttons-container {
+  background: linear-gradient(to bottom, #e8e8e8 0%, #d5d5d5 100%);
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  margin-top: 15px;
+  width: 370px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.action-buttons button {
+  flex: 1;
+  padding: 12px 8px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  min-width: 0;
+}
+
+.action-buttons button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.action-buttons button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Check Button */
+.btn-check {
+  background: linear-gradient(to bottom, #f5a623 0%, #e89b0d 100%);
+}
+
+.btn-check:hover {
+  background: linear-gradient(to bottom, #f7b03e 0%, #ea9f15 100%);
+}
+
+/* Book Button */
+.btn-book {
+  background: linear-gradient(to bottom, #4caf50 0%, #45a049 100%);
+}
+
+.btn-book:hover {
+  background: linear-gradient(to bottom, #5cb85f 0%, #4cae4c 100%);
+}
+
+/* Return Button */
+.btn-return {
+  background: linear-gradient(to bottom, #ffc107 0%, #ffb300 100%);
+}
+
+.btn-return:hover {
+  background: linear-gradient(to bottom, #ffd54f 0%, #ffc107 100%);
+}
+
+/* Clear Button */
+.btn-clear {
+  background: linear-gradient(to bottom, #c41e3a 0%, #a31729 100%);
+}
+
+.btn-clear:hover {
+  background: linear-gradient(to bottom, #d32f2f 0%, #c62828 100%);
+}
+
+/* Icon styles */
+.action-buttons button svg,
+.action-buttons button i,
+.action-buttons button span {
+  width: 18px;
+  height: 18px;
+  font-size: 18px;
 }

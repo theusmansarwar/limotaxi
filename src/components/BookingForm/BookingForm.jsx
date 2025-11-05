@@ -160,8 +160,26 @@ const BookingForm = () => {
     </div>
   </div>
 </div>
-
-      
+<div className="action-buttons-container">
+  <div className="action-buttons">
+    <button className="btn-check">
+      <i className="icon-check"></i>
+      Check
+    </button>
+    <button className="btn-book">
+      <i className="icon-book"></i>
+      Book
+    </button>
+    <button className="btn-return">
+      <i className="icon-return"></i>
+      Return
+    </button>
+    <button className="btn-clear">
+      <i className="icon-clear"></i>
+      Clear
+    </button>
+  </div>
+</div>
 
     </div>
   );
