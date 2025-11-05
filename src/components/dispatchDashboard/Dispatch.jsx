@@ -60,19 +60,19 @@ const Dispatch = () => {
           className={`tab-button ${activeTab === 'assigned' ? 'active' : ''}`}
           onClick={() => setActiveTab('assigned')}
         >
-          Assigned (09)
+          Assigned 
         </button>
         <button 
           className={`tab-button ${activeTab === 'unassigned' ? 'active' : ''}`}
           onClick={() => setActiveTab('unassigned')}
         >
-          Unassigned (11)
+          Unassigned 
         </button>
         <button 
           className={`tab-button ${activeTab === 'active' ? 'active' : ''}`}
           onClick={() => setActiveTab('active')}
         >
-          Active (01)
+          Active 
         </button>
       </div>
 
@@ -82,13 +82,13 @@ const Dispatch = () => {
           <span className="header-label">ID</span>
           <span className="header-label">Zone Queues</span>
         </div>
-        <div className="zone-list">
+        {/* <div className="zone-list">
           {zoneQueues.map((zone) => (
             <div key={zone.id} className="zone-item">
               <span className="zone-badge">{zone.zone}</span>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
 
       {/* Dispatch Table */}
