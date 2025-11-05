@@ -204,3 +204,13 @@
   background: #F5F5F5;
   transform: translateY(-1px);
 }
+.copyright {
+  font-size: 9px;
+  text-align: center;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+}
+.sidebar-footer{
+    margin-bottom: 20px;
+}
