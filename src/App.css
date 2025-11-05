@@ -13,6 +13,7 @@
 .dispatch-dashboard-main{
   display: flex;
   flex-direction: row;
+  gap: 5px;
 }
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
