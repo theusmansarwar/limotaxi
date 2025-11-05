@@ -28,10 +28,10 @@ const BookingForm = () => {
             </div>
 
             <div className="mid-icons">
-              <div className="arrows">
+              {/* <div className="arrows">
                 <span>↑</span>
                 <span>↓</span>
-              </div>
+              </div> */}
               <button className="add-btn">
                 <FaPlus />
               </button>
@@ -112,6 +112,57 @@ const BookingForm = () => {
           </div>
         </div>
       </div>
+      {/* Job Info */}
+<div className="section job-info">
+  <div className="job">
+    <h3>Job Info</h3>
+    <input type="text" placeholder="Vehicle type" />
+    <input type="text" placeholder="Vehicle class" />
+    <input type="text" placeholder="Info (All)" />
+    <input type="text" placeholder="Info (Driver)" />
+  </div>
+  <div className="job">
+    <h3>Job Info</h3>
+    <select><option>Persons</option></select>
+    <select><option>Bags</option></select>
+    <select><option>Wheel Chair</option></select>
+    <select><option>Vehicle</option></select>
+  </div>
+</div>
+{/* Extras */}
+<div className="section extras">
+  <h3>Extras</h3>
+  <div className="extras-grid">
+    <div className="extras-row">
+      <label>Assign To:</label>
+      <select><option>Automatic</option></select>
+    </div>
+    <div className="extras-row">
+      <label>Company:</label>
+      <select><option>Automatic</option></select>
+    </div>
+    <div className="extras-row">
+      <label>Tariff:</label>
+      <select><option>Automatic</option></select>
+    </div>
+    <div className="extras-row">
+      <label>Duration:</label>
+      <select><option>From Route</option></select>
+    </div>
+    <div className="extras-row">
+      <label>Priority:</label>
+      <select><option>Automatic</option></select>
+    </div>
+    <div className="extras-bottom-row">
+      <select><option>Gender</option></select>
+      <input type="text" placeholder="Flight#" />
+      <input type="text" placeholder="Flat#" />
+    </div>
+  </div>
+</div>
+
+      
+
     </div>
   );
 };
