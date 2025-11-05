@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./BookingForm.css";
 import { FaUser, FaTaxi, FaPlus } from "react-icons/fa";
+import { FaCheck, FaBook, FaUndo, FaTimes } from "react-icons/fa";
 
 const BookingForm = () => {
   const [dispatch, setDispatch] = useState("later");
@@ -163,19 +164,19 @@ const BookingForm = () => {
 <div className="action-buttons-container">
   <div className="action-buttons">
     <button className="btn-check">
-      <i className="icon-check"></i>
+      <FaCheck />
       Check
     </button>
     <button className="btn-book">
-      <i className="icon-book"></i>
+      <FaBook />
       Book
     </button>
     <button className="btn-return">
-      <i className="icon-return"></i>
+      <FaUndo />
       Return
     </button>
     <button className="btn-clear">
-      <i className="icon-clear"></i>
+      <FaTimes />
       Clear
     </button>
   </div>

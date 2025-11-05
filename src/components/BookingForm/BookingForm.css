@@ -1,13 +1,41 @@
-/* BookingForm.css - Figma-accurate */
+
 body {
   font-family: "Poppins", sans-serif;
 }
 
 .booking-container {
-  width:401px;
+  width: 810px;
+  max-height: 90vh; 
   margin: 30px auto;
   margin-left: 280px;
   margin-top: 70px;
+  overflow-y: auto; 
+  overflow-x: hidden;
+  padding-right: 10px; 
+}
+
+.booking-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.booking-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.booking-container::-webkit-scrollbar-thumb {
+  background: #b00020;
+  border-radius: 10px;
+}
+
+.booking-container::-webkit-scrollbar-thumb:hover {
+  background: #8a001a;
+}
+
+
+.booking-container {
+  scrollbar-width: thin;
+  scrollbar-color: #b00020 #f1f1f1;
 }
 
 .status-row {
@@ -48,6 +76,7 @@ body {
   margin: 2px 0 0 0;
   font-size: 12px;
   font-weight: 500;
+
 }
 
 .status-box.all { background: #e8e6e6; color: #000; }
@@ -418,7 +447,6 @@ body {
   color: #999;
 }
 
-/* Extras Section Styles */
 .section.extras {
   background-color: #e8e8e8;
   border-radius: 8px;
@@ -439,7 +467,6 @@ body {
   gap: 12px;
 }
 
-/* Row layout for labels and inputs */
 .extras-row {
   display: flex;
   align-items: center;
@@ -454,7 +481,6 @@ body {
   flex-shrink: 0;
 }
 
-/* Style all selects */
 .extras-row select,
 .extras-grid select {
   background-color: white;
@@ -479,7 +505,6 @@ body {
   border-color: #3b82f6;
 }
 
-/* Bottom row with Gender, Flight#, Flat# */
 .extras-bottom-row {
   display: flex;
   gap: 8px;
@@ -491,7 +516,6 @@ body {
   flex-shrink: 0;
 }
 
-/* Style text inputs */
 .extras-grid input[type="text"] {
   background-color: white;
   border: 1px solid #d1d5db;
@@ -506,13 +530,13 @@ body {
 .extras-grid input[type="text"]::placeholder {
   color: #9ca3af;
 }
-/* Action Buttons Section */
 .action-buttons-container {
   background: linear-gradient(to bottom, #e8e8e8 0%, #d5d5d5 100%);
   padding: 16px;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   margin-top: 15px;
+  margin-bottom: 20px; 
   width: 370px;
 }
 
@@ -551,16 +575,15 @@ body {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Check Button */
 .btn-check {
   background: linear-gradient(to bottom, #f5a623 0%, #e89b0d 100%);
 }
 
 .btn-check:hover {
   background: linear-gradient(to bottom, #f7b03e 0%, #ea9f15 100%);
+
 }
 
-/* Book Button */
 .btn-book {
   background: linear-gradient(to bottom, #4caf50 0%, #45a049 100%);
 }
@@ -569,7 +592,6 @@ body {
   background: linear-gradient(to bottom, #5cb85f 0%, #4cae4c 100%);
 }
 
-/* Return Button */
 .btn-return {
   background: linear-gradient(to bottom, #ffc107 0%, #ffb300 100%);
 }
@@ -578,7 +600,6 @@ body {
   background: linear-gradient(to bottom, #ffd54f 0%, #ffc107 100%);
 }
 
-/* Clear Button */
 .btn-clear {
   background: linear-gradient(to bottom, #c41e3a 0%, #a31729 100%);
 }
@@ -587,7 +608,6 @@ body {
   background: linear-gradient(to bottom, #d32f2f 0%, #c62828 100%);
 }
 
-/* Icon styles */
 .action-buttons button svg,
 .action-buttons button i,
 .action-buttons button span {
