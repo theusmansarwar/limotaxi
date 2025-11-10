@@ -1,0 +1,386 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  background-color: #f5f5f5;
+}
+
+.dashboard {
+  width: 603px;
+  margin-top: 50px;
+  margin-left: 253px;
+  padding: 20px;
+}
+
+.billing-section {
+  background: white;
+  border-radius: 8px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  padding: 13px 30px;
+  width: 603px;
+  height: 143px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.billing-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.billing-left {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.billing-label {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  line-height: 1;
+  color: #000;
+}
+
+.billing-amount {
+  font-size: 45px;
+  font-weight: bold;
+  margin-bottom: 3px;
+  line-height: 1;
+  color: #000;
+}
+
+.account-balance {
+  color: #999;
+  font-size: 16px;
+  margin-bottom: 10px;
+  line-height: 1;
+}
+
+.next-billing {
+  color: #666;
+  font-size: 12px;
+  line-height: 1.3;
+}
+
+.billing-right {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.activated-vehicles {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #000;
+}
+
+.vehicles-label {
+  font-weight: 500;
+}
+
+.vehicles-count {
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 0.9;
+  color: #000;
+}
+.billing-btn {
+  background-color: #c41e3a;
+  color: white;
+  border: none;
+  padding: 4px 10px;
+  width: 186px;
+  height: 16px;
+  font-size: 10px;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.billing-btn:hover {
+  background-color: #a01828;
+}
+
+.notice-box {
+  background-color: #e8e8e8;
+  padding: 4px 4px;
+  border-radius: 6px;
+  width: 186px;
+  height: 50px;
+  text-align: center;
+}
+
+.notice-label {
+  font-weight: 600;
+  margin-bottom: 2px;
+  font-size: 12px;
+  line-height: 1.2;
+  color: #000;
+}
+
+.notice-text {
+  font-size: 10px;
+  color: #333;
+  line-height: 1.4;
+}
+/* Companies Section */
+.companies-section {
+  background: white;
+  display: flex;
+  border-radius: 8px;
+  width: 603px;
+  height: 130px;
+  padding: 20px 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  gap:10px;
+}
+.companies-right{
+    width: 350px;
+}
+.companies-left{
+    width:  186px;
+    margin-top: 30px;
+}
+.section-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.companies-text {
+  color: #666;
+  font-size: 12px;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.link-text {
+  color: #c41e3a;
+  font-weight: 500;
+}
+
+.manage-btn {
+  background-color: #c41e3a;
+  color: white;
+  border: none;
+  padding: 6px 25px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+   white-space: nowrap;
+}
+
+.manage-btn:hover {
+  background-color: #a01828;
+}
+
+.jobs-section {
+  background: white;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  width: 603px;
+  height: 323px;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+  margin: 0 0 20px 0;
+}
+
+.jobs-outer-container {
+  /* width: 603px;
+  height: 323px; */
+  display: flex;
+  gap: 30px;
+}
+
+.jobs-left-section {
+  display: flex;
+  flex-direction: column;
+  width: 180px;
+  gap: 24px;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.filter-group label {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+.filter-group select {
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: #fff;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23333' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 35px;
+}
+
+.filter-group select:focus {
+  outline: none;
+  border-color: #999;
+}
+
+.jobs-right-section {
+  flex: 1;
+  display: flex;
+  width: 423px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.chart-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-area {
+  flex: 1;
+  border-left: 2px solid #333;
+  border-bottom: 2px solid #333;
+  background-color: #fafafa;
+  position: relative;
+}
+
+.chart-x-axis {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 8px;
+}
+
+.chart-x-axis span {
+  font-size: 13px;
+  color: #666;
+  font-weight: 400;
+}
+
+.chart-legend {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding-top: 20px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legend-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 2px;
+}
+
+.legend-item span:last-child {
+  font-size: 13px;
+  color: #333;
+}
+
+.cancelled-red {
+  background-color: #c41e3a;
+}
+
+.cancelled-yellow {
+  background-color: #f4c542;
+}
+
+.completed {
+  background-color: #4caf50;
+}
+
+.login-section {
+  background: white;
+  border-radius: 8px;
+  width: 603px;
+  height: 185px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.login-info {
+  margin-top: 10px;
+}
+
+.login-info p {
+  margin-bottom: 10px;
+  font-size: 12px;
+  line-height: 1;
+  color: #333;
+}
+
+.highlight {
+  color: #c41e3a;
+  font-weight: 600;
+}
+
+.password-note {
+  color: #c41e3a;
+  font-size: 13px;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .billing-content {
+    flex-direction: column;
+  }
+
+  .billing-right {
+    align-items: flex-start;
+  }
+
+  .billing-btn,
+  .notice-box {
+    max-width: 100%;
+  }
+
+  .filters {
+    flex-direction: column;
+  }
+
+  .filter-group {
+    max-width: 100%;
+  }
+
+  .legend {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
