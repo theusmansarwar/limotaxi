@@ -52,14 +52,7 @@ body {
 }
 
 /* Dashboard Container */
-.dispatch-dashboard-main {
-  display: flex;
-  flex-direction: row;
-  gap: 30px;
-  padding: 20px;
-  overflow-x: hidden;
-  height: 100%;
-}
+ 
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

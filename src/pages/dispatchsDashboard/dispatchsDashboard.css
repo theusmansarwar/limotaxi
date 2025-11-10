@@ -1,0 +1,10 @@
+.main-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;        /* space between both sections */
+  width: calc(100%-290px);
+  justify-content: center;
+  align-items: flex-start;
+}
+
+ 

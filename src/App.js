@@ -7,8 +7,7 @@ import Dispatch from './components/dispatchDashboard/Dispatch';
 import { dispatchMenuItems, adminMenuItems } from './menuItems';
 import DriverDashboard from './components/DriverDashboard/DriverDash';
 import { useState } from "react";
-import EducationalSection from './components/EducationalDash/EduDash';
-import Reports from './components/Reports/Reports';
+import DispatchDashboard from './pages/dispatchsDashboard/DispatchDashboard';
 
 function App() {
   const [activeSidebar, setActiveSidebar] = useState("dispatch");
@@ -38,15 +37,9 @@ function App() {
           )}
         </div>
 
-        {/* RIGHT SIDE: Dashboard Content */}
-        <div className="right-sides">
-          <div className="dispatch-dashboard-main">
-            {/* <DriverDashboard />
-            <EducationalSection /> */}
-            {/* <BookingForm />
-            <Dispatch /> */}
-            <Reports />
-          </div>
+         
+        <div>
+           <DispatchDashboard />
         </div>
 
       </div>
