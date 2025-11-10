@@ -1,27 +1,87 @@
-
 import './App.css';
 import Sidebar from './components/sidebar/Sidebar';
 import Header from './components/Header/Header';
 import BookingForm from './components/BookingForm/BookingForm';
 import SubSidebar from './components/subSidebar/SubSidebar';
 import Dispatch from './components/dispatchDashboard/Dispatch';
+import { dispatchMenuItems, adminMenuItems } from './menuItems';
+import { useState } from "react";
 
+// function App() {
+
+//   const [activeSidebar, setActiveSidebar] = useState("dispatch");
+
+//   return (
+//     <> 
+//       <div className="sideheader">
+        
+//         <div className='sideSubside'> 
+
+         
+//           <Sidebar setActiveSidebar={setActiveSidebar} activeSidebar={activeSidebar} />
+
+//           {activeSidebar === "dispatch" && (
+//             <SubSidebar 
+//               menuItems={dispatchMenuItems}
+//               title="Dispatch Panel"
+//             />
+//           )}
+
+//           {activeSidebar === "admin" && (
+//             <SubSidebar 
+//               menuItems={adminMenuItems}
+//               title="Admin Panel"
+//             />
+//           )}
+
+//         </div>
+
+//         <Header />
+//       </div>
+
+//       <div className='dispatch-dashboard-main'>
+//         <BookingForm />
+//         <Dispatch />
+//       </div>
+//     </>
+//   );
+// }
 function App() {
+  const [activeSidebar, setActiveSidebar] = useState("dispatch");
+
   return (
-    <> 
-    <div className="sideheader">
-      <div className='sideSubside'> 
-     <Sidebar />
-     <SubSidebar />
-     </div>
-     <Header />
+    <div className="app-layouts">
+      
+      {/* LEFT SIDE: Sidebar + SubSidebar */}
+      <div className="left-sides">
+        <Sidebar 
+          setActiveSidebar={setActiveSidebar} 
+          activeSidebar={activeSidebar} 
+        />
+
+        {activeSidebar === "dispatch" && (
+          <SubSidebar menuItems={dispatchMenuItems} title="Dispatch Panel" />
+        )}
+
+        {activeSidebar === "admin" && (
+          <SubSidebar menuItems={adminMenuItems} title="Admin Panel" />
+        )}
+          <Header />
       </div>
-      <div className='dispatch-dashboard-main' > 
-      <BookingForm/>
-      <Dispatch />
+
+      {/* RIGHT SIDE: Header + Dashboard */}
+      <div className="right-sides">
+       
+
+        <div className="dispatch-dashboard-main">
+          <BookingForm />
+          <Dispatch />
+        </div>
       </div>
-    </>
+
+    </div>
   );
 }
+
 
 export default App;

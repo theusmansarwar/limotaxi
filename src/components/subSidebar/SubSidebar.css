@@ -1,54 +1,201 @@
+/* SubSidebar.css */
+
+* {
+  margin-left: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ 
 .sub-sidebar {
   width: 180px;
-  height: 100vh;
-  background-color: #970d1a;
-  color: #fff;
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  left: 0;
-  top: 0;
-  padding: 0;
-  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+  background:  #970D1A;
+  color: white;
+  height: calc(100vh - 50px);
   overflow-y: auto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   margin-left: 85px;
   margin-top: 50px;
-  padding-top: 35px;
 }
- 
+
+.sidebar-title {
+  padding: 1.25rem 1rem;
+  background: rgba(0, 0, 0, 0.15);
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 .sub-sidebar-menu {
   list-style: none;
-  margin: 2px;
-  padding: 10px 0;
-  flex: 1;
-
+  padding: 0;
+  margin: 0;
 }
 
-.sub-sidebar-menu li {
+.sub-sidebar-menu > li {
+  margin: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.menu-items {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 10px 15px;
-  font-size: 15px;
+  justify-content: space-between;
+  padding: 0.95rem 1.25rem;
   cursor: pointer;
-  transition: background 0.2s, color 0.2s;
-  border-left: 3px solid transparent;
-  margin: 5px;
-  border-radius: 10px;
+  transition: all 0.2s ease;
+  color: rgba(255, 255, 255, 0.95);
+  background: transparent;
 }
 
-.sub-sidebar-menu li svg {
+.menu-item-contents {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+.menu-item-contents span {
+  font-size: 0.925rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+.menu-items:hover {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.sub-sidebar-menu > li.active > .menu-items {
+  background:black;
+  font-weight: 500;
+}
+
+.has-dropdown {
+  user-select: none;
+}
+
+.dropdown-arrow {
+  display: flex;
+  align-items: center;
+  opacity: 0.85;
+  transition: all 0.2s ease;
+  margin-left: auto;
+}
+
+.dropdown-arrow svg {
+  transition: transform 0.3s ease;
+}
+
+.has-dropdown:hover .dropdown-arrow {
+  opacity: 1;
+}
+
+/* Submenu Styles */
+.submenu {
+  list-style: none;
+  background: rgba(0, 0, 0, 0.12);
+  margin: 0;
+  padding: 0;
+  animation: slideDown 0.25s ease-out;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    max-height: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    max-height: 600px;
+    transform: translateY(0);
+  }
+}
+
+.submenu li {
+  margin: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.submenu li:last-child {
+  border-bottom: none;
+}
+
+.submenu .menu-items {
+  padding: 0.85rem 1.25rem 0.85rem 2.75rem;
+  font-size: 0.9rem;
+}
+
+.submenu .menu-item-contents {
+  gap: 0.65rem;
+}
+
+.submenu .menu-item-contents span {
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.submenu .menu-items:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.submenu li.active .menu-items {
+  background:black;
+  font-weight: 500;
+  border-left: 3px solid rgba(255, 255, 255, 0.9);
+  padding-left: 2.56rem;
+}
+
+/* Scrollbar Styling */
+.sub-sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sub-sidebar::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.sub-sidebar::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 3px;
+}
+
+.sub-sidebar::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sub-sidebar {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Icon Sizing */
+.menu-item-contents svg {
   flex-shrink: 0;
+  opacity: 0.95;
 }
 
-.sub-sidebar-menu li:hover {
-  background-color: #b30e1f;
+.submenu .menu-item-contents svg {
+  opacity: 0.9;
 }
 
-.sub-sidebar-menu li.active {
-   
-   background-color: black;
+/* Smooth Transitions */
+.sub-sidebar-menu > li,
+.submenu li {
+  transition: background-color 0.2s ease;
 }
 
- 
- 
+/* Hover Effects Enhancement */
+.menu-items:active {
+  background: black;
+}
+
+/* Focus Styles for Accessibility */
+.menu-items:focus {
+  outline: 2px solid rgba(255, 255, 255, 0.3);
+  outline-offset: -2px;
+}

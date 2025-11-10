@@ -15,6 +15,25 @@
   flex-direction: row;
   gap: 5px;
 }
+.app-layouts {
+  display: flex;
+  flex-direction: row;
+  overflow-x: hidden;
+}
+
+/* LEFT SIDE (Sidebar + SubSidebar) */
+.left-sides {
+  display: flex;
+  flex-direction: column;
+}
+
+/* RIGHT SIDE (Header + Dashboard) */
+.right-sides {
+  display: flex;
+  flex-direction: column;
+  width: 100%;     /* take full remaining width */
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

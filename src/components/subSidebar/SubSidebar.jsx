@@ -1,95 +1,78 @@
-import React from "react";
-import "./SubSidebar.css";
+ 
+import React, { useState } from "react";
 import {
-  LayoutDashboard,
-  Briefcase,
-  Clock,
-  Truck,
-  FileText,
-  Ban,
-  Search,
-  FolderClosed,
-  Users,
-  Bell,
-  AlertTriangle,
-  Slash,
-  Banknote,
-  Settings,
-  LogOut
+   
+  LogOut,
+  ChevronDown,
+  ChevronUp,
+  
 } from "lucide-react";
+import './SubSidebar.css'
 
-const SubSidebar = () => {
+// Reusable SubSidebar Component
+const SubSidebar = ({ menuItems, title }) => {
+  const [openDropdowns, setOpenDropdowns] = useState({});
+
+  const toggleDropdown = (id) => {
+    setOpenDropdowns(prev => ({
+      ...prev,
+      [id]: !prev[id]
+    }));
+  };
+
+  const renderMenuItem = (item) => {
+    const Icon = item.icon;
+    const hasDropdown = item.children && item.children.length > 0;
+    const isOpen = openDropdowns[item.id];
+
+    return (
+      <li key={item.id} className={item.active ? "active" : ""}>
+        <div 
+          className={`menu-items ${hasDropdown ? "has-dropdown" : ""}`}
+          onClick={() => hasDropdown && toggleDropdown(item.id)}
+        >
+          <div className="menu-item-contents">
+            <Icon size={18} />
+            <span>{item.label}</span>
+          </div>
+          {hasDropdown && (
+            <div className="dropdown-arrows">
+              {isOpen ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+            </div>
+          )}
+        </div>
+        
+        {hasDropdown && isOpen && (
+          <ul className="submenu">
+            {item.children.map(child => {
+              const ChildIcon = child.icon;
+              return (
+                <li key={child.id} className={child.active ? "active" : ""}>
+                  <div className="menu-items">
+                    <div className="menu-item-contents">
+                      <ChildIcon size={16} />
+                      <span>{child.label}</span>
+                    </div>
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+        )}
+      </li>
+    );
+  };
+
   return (
     <div className="sub-sidebar">
-       
-
       <ul className="sub-sidebar-menu">
-        <li className="active">
-          <LayoutDashboard size={18} />
-          <span>Dashboard</span>
-        </li>
-        <li>
-          <Briefcase size={18} />
-          <span>Jobs Overview</span>
-        </li>
-        <li>
-          <Clock size={18} />
-          <span>Timeline</span>
-        </li>
-        <li>
-          <Truck size={18} />
-          <span>Vehicles</span>
-        </li>
-        <li>
-          <FileText size={18} />
-          <span>Permits</span>
-        </li>
-        <li>
-          <Ban size={18} />
-          <span>Blacklist</span>
-        </li>
-        <li>
-          <Search size={18} />
-          <span>Search Jobs</span>
-        </li>
-        <li>
-          <FolderClosed size={18} />
-          <span>Closed Jobs</span>
-        </li>
-        <li>
-          <Users size={18} />
-          <span>Customers</span>
-        </li>
-        <li>
-          <Bell size={18} />
-          <span>Alarms</span>
-        </li>
-        <li>
-          <AlertTriangle size={18} />
-          <span>Alerts</span>
-        </li>
-        <li>
-          <Slash size={18} />
-          <span>Suspensions</span>
-        </li>
-        <li>
-          <Banknote size={18} />
-          <span>Banking</span>
-        </li>
-        <li>
-          <Settings size={18} />
-          <span>Preferences</span>
-        </li>
+        {menuItems.map(item => renderMenuItem(item))}
       </ul>
-
-      {/* <div className="sub-sidebar-footer">
-        <button className="logout-btn">
-          <LogOut size={18} />
-          <span>Logout</span>
-        </button>
-      </div> */}
     </div>
   );
 };
 
-export default SubSidebar;
+ 
+
+// Demo Component
+ export default SubSidebar;
