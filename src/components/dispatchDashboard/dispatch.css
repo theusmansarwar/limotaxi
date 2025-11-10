@@ -1,7 +1,7 @@
 /* DispatchDashboard.css */
 
 .dispatch-dashboard {
-  width: 100%;
+  width: 800px;
   max-height: 90vh; /* Set maximum height for scrolling */
   display: flex;
   flex-direction: column;
