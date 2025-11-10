@@ -5,7 +5,10 @@ import BookingForm from './components/BookingForm/BookingForm';
 import SubSidebar from './components/subSidebar/SubSidebar';
 import Dispatch from './components/dispatchDashboard/Dispatch';
 import { dispatchMenuItems, adminMenuItems } from './menuItems';
+import DriverDashboard from './components/DriverDashboard/DriverDash';
 import { useState } from "react";
+import EducationalSection from './components/EducationalDash/EduDash';
+import Reports from './components/Reports/Reports';
 
 function App() {
   const [activeSidebar, setActiveSidebar] = useState("dispatch");
@@ -38,8 +41,11 @@ function App() {
         {/* RIGHT SIDE: Dashboard Content */}
         <div className="right-sides">
           <div className="dispatch-dashboard-main">
-            <BookingForm />
-            <Dispatch />
+            {/* <DriverDashboard />
+            <EducationalSection /> */}
+            {/* <BookingForm />
+            <Dispatch /> */}
+            <Reports />
           </div>
         </div>
 

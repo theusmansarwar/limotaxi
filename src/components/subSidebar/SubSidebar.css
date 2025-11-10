@@ -15,6 +15,8 @@
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
   margin-left: 85px;
   margin-top: 50px;
+  position: fixed;
+  padding-top: 20px;
 }
 
 .sidebar-title {

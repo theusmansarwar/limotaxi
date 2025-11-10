@@ -13,9 +13,9 @@ body {
 
 .dashboard {
   width: 603px;
-  margin-top: 50px;
-  margin-left: 253px;
+  margin-top: 30px;
   padding: 20px;
+  margin-left: 240px;
 }
 
 .billing-section {
@@ -98,6 +98,7 @@ body {
   line-height: 0.9;
   color: #000;
 }
+
 .billing-btn {
   background-color: #c41e3a;
   color: white;
@@ -138,6 +139,7 @@ body {
   color: #333;
   line-height: 1.4;
 }
+
 /* Companies Section */
 .companies-section {
   background: white;
@@ -145,28 +147,37 @@ body {
   border-radius: 8px;
   width: 603px;
   height: 130px;
-  padding: 20px 15px;
+  padding: 15px;
   margin-bottom: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  gap:10px;
+  gap: 10px;
+  align-items: center;
 }
-.companies-right{
-    width: 350px;
+
+.companies-left {
+  width: 186px;
+  display: flex;
+  align-items: center;
 }
-.companies-left{
-    width:  186px;
-    margin-top: 30px;
+
+.companies-right {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+
 .section-title {
   font-size: 20px;
   font-weight: 600;
-  margin-bottom: 6px;
+  margin: 0 0 6px 0;
+  line-height: 1.2;
 }
 
 .companies-text {
   color: #666;
-  font-size: 12px;
-  margin-bottom: 20px;
+  font-size: 14px;
+  margin: 0 0 15px 0;
   line-height: 1.6;
 }
 
@@ -184,42 +195,44 @@ body {
   font-weight: 600;
   border-radius: 4px;
   cursor: pointer;
-   white-space: nowrap;
+  white-space: nowrap;
+  margin-top: 20px;
 }
 
 .manage-btn:hover {
   background-color: #a01828;
 }
 
+/* Jobs Section */
 .jobs-section {
   background: white;
   border-radius: 8px;
-  padding: 24px;
+  padding: 15px 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
   width: 603px;
   height: 323px;
   margin-bottom: 20px;
 }
 
-.section-title {
+.jobs-section .section-title {
   font-size: 20px;
   font-weight: 600;
   color: #000;
-  margin: 0 0 20px 0;
+  margin: 0 0 15px 0;
+  line-height: 1.2;
 }
 
 .jobs-outer-container {
-  /* width: 603px;
-  height: 323px; */
   display: flex;
   gap: 30px;
+  height: calc(100% - 35px);
 }
 
 .jobs-left-section {
   display: flex;
   flex-direction: column;
   width: 180px;
-  gap: 24px;
+  gap: 20px;
 }
 
 .filter-group {
@@ -232,6 +245,7 @@ body {
   font-size: 14px;
   color: #333;
   font-weight: 500;
+  margin: 0;
 }
 
 .filter-group select {
@@ -324,6 +338,7 @@ body {
   background-color: #4caf50;
 }
 
+/* Login Section */
 .login-section {
   background: white;
   border-radius: 8px;
