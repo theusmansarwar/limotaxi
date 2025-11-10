@@ -1,22 +1,19 @@
- 
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {
-   
-  LogOut,
   ChevronDown,
-  ChevronUp,
-  
+  ChevronUp
 } from "lucide-react";
-import './SubSidebar.css'
+import "./SubSidebar.css";
 
-// Reusable SubSidebar Component
-const SubSidebar = ({ menuItems, title }) => {
+const SubSidebar = ({ menuItems }) => {
   const [openDropdowns, setOpenDropdowns] = useState({});
+  const navigate = useNavigate();
 
   const toggleDropdown = (id) => {
-    setOpenDropdowns(prev => ({
+    setOpenDropdowns((prev) => ({
       ...prev,
-      [id]: !prev[id]
+      [id]: !prev[id],
     }));
   };
 
@@ -25,29 +22,45 @@ const SubSidebar = ({ menuItems, title }) => {
     const hasDropdown = item.children && item.children.length > 0;
     const isOpen = openDropdowns[item.id];
 
+    const handleClick = () => {
+      if (hasDropdown) {
+        toggleDropdown(item.id);
+      } else {
+        navigate(item.path);   // ✅ Navigate for items WITHOUT dropdown
+      }
+    };
+
     return (
       <li key={item.id} className={item.active ? "active" : ""}>
-        <div 
+        {/* Parent Item */}
+        <div
           className={`menu-items ${hasDropdown ? "has-dropdown" : ""}`}
-          onClick={() => hasDropdown && toggleDropdown(item.id)}
+          onClick={handleClick}
         >
           <div className="menu-item-contents">
             <Icon size={18} />
             <span>{item.label}</span>
           </div>
+
           {hasDropdown && (
             <div className="dropdown-arrows">
               {isOpen ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
             </div>
           )}
         </div>
-        
+
+        {/* Dropdown Children */}
         {hasDropdown && isOpen && (
           <ul className="submenu">
-            {item.children.map(child => {
+            {item.children.map((child) => {
               const ChildIcon = child.icon;
+
               return (
-                <li key={child.id} className={child.active ? "active" : ""}>
+                <li
+                  key={child.id}
+                  className={child.active ? "active" : ""}
+                  onClick={() => navigate(child.path)}   // ✅ Navigate for CHILD items
+                >
                   <div className="menu-items">
                     <div className="menu-item-contents">
                       <ChildIcon size={16} />
@@ -66,13 +79,10 @@ const SubSidebar = ({ menuItems, title }) => {
   return (
     <div className="sub-sidebar">
       <ul className="sub-sidebar-menu">
-        {menuItems.map(item => renderMenuItem(item))}
+        {menuItems.map((item) => renderMenuItem(item))}
       </ul>
     </div>
   );
 };
 
- 
-
-// Demo Component
- export default SubSidebar;
+export default SubSidebar;
