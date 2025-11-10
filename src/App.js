@@ -9,6 +9,8 @@ import DriverDashboard from './components/DriverDashboard/DriverDash';
 import Reports from './components/Reports/Reports';
 import { useState } from "react";
 import { Route, Routes, Navigate } from 'react-router-dom';
+import DispatchDashboard from './pages/dispatchsDashboard/DispatchDashboard';
+import AdminDashboard from './pages/adminDashboard/AdminDashboard';
 
 function App() {
   const [activeSidebar, setActiveSidebar] = useState("dispatch");
@@ -48,7 +50,7 @@ function App() {
             <Route path="/" element={<Navigate to="/dispatch/dashboard" replace />} />
 
             {/* DISPATCH ROUTES */}
-            <Route path="/dispatch/dashboard" element={<Dispatch />} />
+            <Route path="/dispatch/dashboard" element={<DispatchDashboard />} />
             <Route path="/dispatch/jobs" element={<div className="page-content"><h1>Jobs Overview</h1></div>} />
             <Route path="/dispatch/timeline" element={<div className="page-content"><h1>Timeline</h1></div>} />
             <Route path="/dispatch/vehicles" element={<div className="page-content"><h1>Vehicles</h1></div>} />
@@ -64,7 +66,7 @@ function App() {
             <Route path="/dispatch/preferences" element={<div className="page-content"><h1>Preferences</h1></div>} />
 
             {/* ADMIN ROUTES */}
-            <Route path="/admin/general" element={<BookingForm />} />
+            <Route path="/admin/general" element={<AdminDashboard/>} />
             <Route path="/admin/users" element={<div className="page-content"><h1>Users Management</h1></div>} />
             <Route path="/admin/vehicles" element={<div className="page-content"><h1>Vehicles Management</h1></div>} />
             <Route path="/admin/zone" element={<div className="page-content"><h1>Zone Management</h1></div>} />
@@ -75,7 +77,7 @@ function App() {
             <Route path="/admin/planning" element={<div className="page-content"><h1>Planning</h1></div>} />
             
             {/* Admin History Routes */}
-            <Route path="/admin/booking-history" element={<div className="page-content"><h1>Booking History</h1></div>} />
+            <Route path="/admin/booking-history" element={<Reports />} />
             <Route path="/admin/payment-history" element={<div className="page-content"><h1>Payment History</h1></div>} />
             
             {/* Admin Account Routes */}
