@@ -46,13 +46,16 @@ header {
 }
 
 /* RIGHT SIDE: Dashboard Section */
+/* RIGHT SIDE: Dashboard Section */
 .right-sides {
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding: 20px;
+  padding: 0; /* Remove padding, let child components handle it */
   overflow-y: auto;
+  overflow-x: hidden;
   background-color: #f7f7f7;
+  width: 100%;
 }
 
 /* BOOKING + DISPATCH CONTAINER */
