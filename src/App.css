@@ -1,4 +1,20 @@
-/* RESET */
+/* COLOR VARIABLES (from user input) */
+:root {
+  --primary-red: #A10020;
+  --secondary-red: #BB0025;
+  --primary-white: #E8E8E8;
+  --secondary-white: #FFFFFF;
+  --primary-black: #000000;
+  --secondary-black: #1D1D28;
+  --secondary-blue: #272736;
+  --secondary-gray: #CDCDCD;
+  --primary-gray:#EAEAEA;
+  --touch-gray:#9F9F9F;
+  --primary-green: #1B880D;
+  --primary-yellow: #EA9800;
+}
+
+ 
 * {
   margin: 0;
   padding: 0;
@@ -8,57 +24,77 @@
 body {
   overflow-x: hidden;
   font-family: "Poppins", sans-serif;
-  background-color: #f5f5f5;
+  background-color: var(--primary-gray);  
 }
 
-/* APP WRAPPER */
+ 
 .app-container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-/* HEADER */
+ 
 header {
+  height: 80px;  
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: #fff;
+  background-color: var(--secondary-white);
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  margin-bottom: 10px;
 }
 
-/* MAIN LAYOUT BELOW HEADER */
+ 
 .app-layouts {
   display: flex;
-  flex: 1;
+  flex: 1; 
   width: 100%;
-  overflow: hidden;
+  overflow-x: hidden; 
 }
 
-/* LEFT SIDES: Sidebar + SubSidebar */
+ 
 .left-sides {
-  display: flex;
-  flex-direction: row;
-  flex-shrink: 0;
-  width: auto;
-  height: calc(100vh - 80px); /* header approx height */
-  background: #fff;
+  display: flex;  
+  width: 17%; 
+  flex-shrink: 0;  
+  background: var(--secondary-white);
+  
+ 
+  position: sticky; 
+  top: 80px;  
+  height: calc(100vh - 80px); 
+  overflow-y: auto; 
 }
 
-/* RIGHT SIDE: Dashboard Section */
-/* RIGHT SIDE: Dashboard Section */
+ 
+.main-sidebar-area {
+  width: 40%;  
+  flex-shrink: 0;
+  border-right: 1px solid var(--primary-gray);
+}
+
+.sub-sidebar-area {
+  width:60%;
+  flex-grow: 1;  
+  flex-shrink: 0;
+}
+
+
+ 
 .right-sides {
+  width: 70%;  
   display: flex;
   flex-direction: column;
-  flex: 1;
-  padding: 0; /* Remove padding, let child components handle it */
+  flex: 1; 
+   
+  min-height: calc(100vh - 80px); 
+  padding: 24px; 
   overflow-y: auto;
   overflow-x: hidden;
-  background-color: #f7f7f7;
-  width: 100%;
+  background-color: var(--primary-gray);  
 }
-
-/* BOOKING + DISPATCH CONTAINER */
+ 
 .booking-dispatch-container {
   display: flex;
   gap: 20px;
@@ -66,23 +102,48 @@ header {
   justify-content: space-between;
   width: 100%;
 }
-
 .booking-section,
 .dispatch-section {
-  /* background: #fff; */
   border-radius: 10px;
-  flex: 1 1 48%; /* side by side, adjusts on smaller screens */
+  flex: 1 1 48%;
   min-width: 400px;
-  /* box-shadow: 0 3px 8px rgba(0,0,0,0.1); */
   padding: 15px;
 }
 
-/* RESPONSIVE FIXES */
-@media (max-width: 1024px) {
+ 
+@media (max-width: 1200px) {
+  .app-layouts {
+    flex-direction: column;
+  }
+  
+  .left-sides {
+    position: relative;  
+    top: 0;
+    width: 100%; 
+    height: auto;  
+    overflow-x: auto;  
+    border-bottom: 1px solid var(--primary-gray);
+  }
+
+  
+  .main-sidebar-area {
+    width: 80px;  
+  }
+
+  .sub-sidebar-area {
+    width: 200px;  
+    flex-grow: 0;  
+  }
+  
+  .right-sides {
+    width: 100%;  
+    min-height: auto; 
+    padding: 16px; 
+  }
+  
   .booking-dispatch-container {
     flex-direction: column;
   }
-
   .booking-section,
   .dispatch-section {
     flex: 1 1 100%;

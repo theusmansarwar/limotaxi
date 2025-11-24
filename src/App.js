@@ -7,10 +7,12 @@ import SubSidebar from './components/subSidebar/SubSidebar';
 import { dispatchMenuItems, adminMenuItems } from './menuItems';
 import DriverDashboard from './components/DriverDashboard/DriverDash';
 import Reports from './components/Reports/Reports';
+import Payment from './components/Payment History/Payment'
 import { useState } from "react";
 import { Route, Routes, Navigate } from 'react-router-dom';
 import DispatchDashboard from './pages/dispatchsDashboard/DispatchDashboard';
 import AdminDashboard from './pages/adminDashboard/AdminDashboard';
+import Account from './components/Account/Account';
 
 function App() {
   const [activeSidebar, setActiveSidebar] = useState("dispatch");
@@ -22,18 +24,18 @@ function App() {
       <div className="app-layouts">
 
         <div className="left-sides">
-          <Sidebar 
+          <Sidebar  className="main-sidebar-area "
             setActiveSidebar={setActiveSidebar} 
             activeSidebar={activeSidebar} 
           />
           {activeSidebar === "dispatch" && (
-            <SubSidebar 
+            <SubSidebar className="sub-sidebar-area "
               menuItems={dispatchMenuItems} 
               title="Dispatch Panel" 
             />
           )}
           {activeSidebar === "admin" && (
-            <SubSidebar 
+            <SubSidebar className="sub-sidebar-area "
               menuItems={adminMenuItems} 
               title="Admin Panel" 
             />
@@ -72,8 +74,8 @@ function App() {
             
            
             <Route path="/admin/booking-history" element={<Reports />} />
-            <Route path="/admin/payment-history" element={<div className="page-content"><h1>Payment History</h1></div>} />
-            
+            <Route path="/admin/payment-history" element={ <Payment />}/>
+            <Route path="/admin/billing" element={ <Account />}/>
          
             <Route path="/admin/profile" element={<div className="page-content"><h1>Profile</h1></div>} />
             <Route path="/admin/settings" element={<div className="page-content"><h1>Settings</h1></div>} />

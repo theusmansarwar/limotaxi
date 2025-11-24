@@ -1,0 +1,510 @@
+.AccountsDashboard{
+  /* background-color: #E8E8E8; */
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  /* background-color: orangered; */
+  margin-top: 60px;
+ 
+}
+.leftArea{
+  width: 50%;
+  color: var(--primary-white);
+}
+/* MAIN WRAPPER */
+.account-layout {
+  display: flex;
+  gap: 20px;
+ 
+}
+/* link */
+.links {
+  height: 50px;
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.over {
+  color: var(--primary-black);
+  font-size: 14px;
+  font-weight: 600;
+  
+}
+
+.bill,
+.work {
+  color: var(--secondary-red);
+  font-size: 14px;
+  
+}
+
+/* BILLING BOX */
+.billing-section {
+  background-color: var(--secondary-white);
+  border-radius: 8px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  /* padding: 15px 20px; */
+  width: 95%;
+  height: fit-content;
+  margin-left: 20px; 
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* FLEX FIX */
+.billing-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  /* box-sizing: border-box;
+  background-color: yellowgreen ;
+} */
+}
+/* LEFT SIDE */
+.billing-left {
+  display: flex;
+  width: 55%;
+}
+
+.billing-label {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary-black);
+}
+
+.billing-amount {
+  font-size: 35px;
+  font-weight: bold;
+  color: var(--primary-black);
+}
+
+.account-balance {
+  color: var(--touch-gray);
+  font-size: 15px;
+  margin-top: 4px;
+}
+
+.next-billing {
+  color: var(--primary-black);
+  font-size: 10px;
+  margin-top: 2px;
+}
+
+.payment {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 10px;
+  color: var(--primary-black);
+  width: fit-content;
+}
+
+.payment-text {
+  color: var(--touch-gray);
+  font-size: 12px;
+  width: 115%;
+}
+
+/* RIGHT SIDE */
+.billing-right {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.activated-vehicles {
+  font-size: 14px;
+  display: flex;
+  gap: 4px;
+  font-weight: 500;
+  color: var(--primary-black);
+  margin: 0%;
+}
+
+.activated-vehicles span {
+  font-weight: 600;
+}
+
+.vehicles-count {
+  font-size: 45px;
+  font-weight: bold;
+  line-height: 0.9;
+  color: var(--primary-black);
+}
+
+.period {
+  color: var(--touch-gray);
+  margin: 0%;
+  padding: 0%;
+  margin-right: 70px;
+}
+
+/* BUTTON */
+.billing-btn {
+  background-color: var(--secondary-red);
+  color: var(--secondary-white);
+  border: none;
+  padding: 16px;
+  width: 140px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-top: 20px; 
+}
+
+.billing-btn:hover {
+  background-color: var(--primary-red);
+}
+
+.registered {
+  height: 100px;
+  width: 95%;
+  background-color: var(--secondary-white);
+  display: flex;
+  justify-content: space-around;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  margin-bottom: 20px;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.reg {
+  color: var(--primary-black);
+  font-weight: 600;
+}
+
+.trans-box {
+   width: 95%;
+  height: fit-content;
+  margin-left: 20px; 
+  background: var(--secondary-white);
+  border-radius: 5px;
+  padding: 12px;
+  box-shadow: 0 0 4px rgba(0,0,0,0.2);
+  /* background-color: yellow; */
+}
+
+/* Header */
+.trans-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: magenta; */
+width: 100%;
+  
+}
+.trans-head .transH {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--touch-gray);
+  /* background-color: #BB0025; */
+  width: 70%;
+}
+
+.trans-filter {
+  padding: 5px 32px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  display: flex;
+  justify-content: space-between;
+  
+}
+.filter{
+  color: var(--touch-gray);
+  margin-right: 10px;
+}
+/* Table */
+.trans-table {
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 2px;
+  background-color: var(--secondary-white);
+  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.12);
+  /* background-color: yellow; */
+}
+
+.trans-table th {
+  font-size: 13px;
+  color: var(--touch-gray);
+  text-align: left;
+  padding: 6px;
+  /* background-color: yellow; */
+}
+
+.trans-table td {
+  padding: 6px;
+  font-size: 13px;
+  /* background-color: yellow; */
+}
+
+
+/* Pagination */
+.trans-pagination {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  margin-top: 8px;
+  color: var(--touch-gray);
+}
+
+/* .rows-select {
+  padding: 3px;
+  border: 1px solid var(--touch-gray);
+  background-color: yellow;
+
+} */
+
+.btn-page {
+  padding: 3px 8px;
+  border: 1px solid #ccc;
+  background: var(--primary-gray);
+  cursor: pointer;
+}
+
+.btn-page:hover {
+  background: var(--secondary-gray);
+}
+
+.page-info {
+  margin-left: auto;
+  margin-right: 5px;
+}
+
+.rightArea{
+  background-color: var(--secondary-red);
+  height: 100vh;
+  width: 55%;
+  margin:0%;
+  padding: 0%;
+
+}
+
+.rateSec{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  color: var(--secondary-white);
+  margin-left: 20px;
+  gap: 8px;
+}
+
+.Rate{
+  font-weight: 550;
+  color: var(--secondary-white);
+}
+.Dollar{
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--secondary-white);
+}
+.rightText{
+  font-size: 14px;
+  width: 90%;
+  margin-bottom: 15px;
+  border-bottom: 2px solid var(--touch-gray);
+  padding-bottom: 12px;
+}
+.monthSec{
+  color: var(--secondary-white);
+  margin-left: 20px;
+  gap: 8px; 
+}
+.month{
+  font-size: 18px;
+  font-weight: 550;
+}
+.monthSec ul li {
+  font-size: 14px;
+  font-weight: 100;
+  margin-left: 20px;
+  margin-top: 15px;
+}
+.monthText{
+  width: 75%;
+  margin-top: 15px;
+  font-size: 14px;
+  margin-bottom: 65px;
+}
+/* USAGE SECTION */
+.usage-box {
+  width: 95%;
+  height: fit-content;
+  background: var(--secondary-white);
+  border-radius: 5px;
+  padding: 12px;
+  box-shadow: 0 0 4px rgba(0,0,0,0.2);
+}
+
+/* Header */
+.usage-head {
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+/* margin-top: 10px; */
+height: 30px;
+}
+
+.usage-head h3 {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--touch-gray);
+}
+
+.timeP{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.time {
+  font-size: 12px;
+  color: var(--touch-gray);
+}
+
+/* Usage Table */
+.usage-table {
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 2px;
+  background-color: var(--secondary-white);
+  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.12);
+}
+
+.usage-table th {
+  font-size: 13px;
+  color: var(--touch-gray);
+  text-align: left;
+  padding: 6px;
+}
+
+.usage-table td {
+  padding: 6px;
+  font-size: 13px;
+}
+
+.usage-pagination {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+.usage-pagination .rows-select {
+  padding: 3px;
+  border: 1px solid #ccc;
+}
+
+.usage-pagination .btn-page {
+  padding: 3px 8px;
+  border: 1px solid #ccc;
+  background: var(--secondary-white);
+  
+  cursor: pointer;
+}
+
+.usage-pagination .btn-page:hover {
+  background: #eee;
+}
+
+.usage-pagination .page-info {
+  margin-left: auto;
+  margin-right: 5px;
+}
+/* USAGE SECTION */
+.usage-box {
+  width: 95%;
+  height: fit-content;
+  margin-left: 20px; 
+  background: var(--secondary-white);
+  border-radius: 5px;
+  padding: 12px;
+  box-shadow: 0 0 4px rgba(0,0,0,0.2);
+  margin-top: 20px;
+}
+
+/* Header */
+.usage-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.usage-head h3 {
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--touch-gray);
+}
+
+.timeP{
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.time {
+  font-size: 12px;
+  color: var(--touch-gray);
+}
+
+/* Usage Table */
+.usage-table {
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 2px;
+  background-color: var(--secondary-white);
+  box-shadow: 0 0px 15px rgba(0, 0, 0, 0.12);
+}
+
+.usage-table th {
+  font-size: 13px;
+  color: var(--touch-gray);
+  text-align: left;
+  padding: 6px;
+}
+
+.usage-table td {
+  padding: 6px;
+  font-size: 13px;
+}
+
+.usage-pagination {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+.usage-pagination .rows-select {
+  padding: 3px;
+  border: 1px solid #ccc;
+}
+
+.usage-pagination .btn-page {
+  padding: 3px 8px;
+  border: 1px solid #ccc;
+  background: var(--primary-gray);
+  cursor: pointer;
+}
+
+.usage-pagination .btn-page:hover {
+  background: var(--secondary-gray);
+}
+
+.usage-pagination .page-info {
+  margin-left: auto;
+  margin-right: 5px;
+}

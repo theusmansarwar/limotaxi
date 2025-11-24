@@ -19,7 +19,6 @@ import {
   BookOpen
 } from "lucide-react";
 
-// Dispatch Sidebar Menu Items (without dropdowns)
 export const dispatchMenuItems = [
   { 
     id: "dashboard", 
@@ -196,16 +195,40 @@ export const adminMenuItems = [
     icon: CreditCard,
     children: [
       { 
-        id: "profile", 
-        label: "Profile", 
+        id: "billing", 
+        label: "Billing", 
         icon: Users,
-        path: "/admin/profile" 
+        path: "/admin/billing" 
       },
       { 
-        id: "settings", 
-        label: "Settings", 
+        id: "customer", 
+        label: "Customer", 
+        icon: Users,
+        path: "/admin/customer" 
+      },
+      { 
+        id: "vouchers", 
+        label: "Vouchers", 
         icon: Settings,
-        path: "/admin/settings" 
+        path: "/admin/vouchers" 
+      },
+      { 
+        id: "bank", 
+        label: "Bank", 
+        icon: Settings,
+        path: "/admin/bank" 
+      },
+      { 
+        id: "agreements", 
+        label: "Agreements", 
+        icon: Settings,
+        path: "/admin/agreements" 
+      },
+      { 
+        id: "blacklist", 
+        label: "Blacklist", 
+        icon: Settings,
+        path: "/admin/blacklist" 
       }
     ]
   },

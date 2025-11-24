@@ -16,7 +16,7 @@
   max-width: 450px;
   height: fit-content;
   position: relative;
-  margin-left: 270px;
+  /* margin-left: 270px; */
   margin-top: 50px;
   /* z-index: 10; */
 }

@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState  } from "react";
+import { useNavigate,useLocation} from "react-router-dom";
 import {
   ChevronDown,
   ChevronUp
@@ -9,6 +9,7 @@ import "./SubSidebar.css";
 const SubSidebar = ({ menuItems }) => {
   const [openDropdowns, setOpenDropdowns] = useState({});
   const navigate = useNavigate();
+  const location = useLocation();
 
   const toggleDropdown = (id) => {
     setOpenDropdowns((prev) => ({
@@ -22,16 +23,19 @@ const SubSidebar = ({ menuItems }) => {
     const hasDropdown = item.children && item.children.length > 0;
     const isOpen = openDropdowns[item.id];
 
+    const isActive = item.path === location.pathname;
+    const isParentActive = hasDropdown && item.children.some(child => child.path === location.pathname);
+
     const handleClick = () => {
       if (hasDropdown) {
         toggleDropdown(item.id);
       } else {
-        navigate(item.path);   // ✅ Navigate for items WITHOUT dropdown
+        navigate(item.path);    
       }
     };
 
     return (
-      <li key={item.id} className={item.active ? "active" : ""}>
+      <li key={item.id} className={isActive || isParentActive ? "active" : ""}>
         {/* Parent Item */}
         <div
           className={`menu-items ${hasDropdown ? "has-dropdown" : ""}`}
@@ -50,16 +54,17 @@ const SubSidebar = ({ menuItems }) => {
         </div>
 
         {/* Dropdown Children */}
-        {hasDropdown && isOpen && (
+        {hasDropdown  && (isOpen || isParentActive) && (
           <ul className="submenu">
             {item.children.map((child) => {
               const ChildIcon = child.icon;
+              const isChildActive = child.path === location.pathname;
 
               return (
                 <li
                   key={child.id}
-                  className={child.active ? "active" : ""}
-                  onClick={() => navigate(child.path)}   // ✅ Navigate for CHILD items
+                  className={isChildActive ? "active" : ""}
+                  onClick={() => navigate(child.path)}    
                 >
                   <div className="menu-items">
                     <div className="menu-item-contents">
