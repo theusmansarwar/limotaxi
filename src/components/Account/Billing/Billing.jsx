@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./BookingForm.css";
+import "./Billing.css";
 import { FaUser, FaTaxi, FaPlus } from "react-icons/fa";
 import { FaCheck, FaBook, FaUndo, FaTimes } from "react-icons/fa";
 
