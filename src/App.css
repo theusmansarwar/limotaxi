@@ -89,7 +89,7 @@ header {
   flex: 1; 
    
   min-height: calc(100vh - 80px); 
-  padding: 24px; 
+  padding: 24px  14px; 
   overflow-y: auto;
   overflow-x: hidden;
   background-color: var(--primary-gray);  

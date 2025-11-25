@@ -1,0 +1,56 @@
+ 
+.InfoPage{
+    height: 800px;
+    width: 100%;
+    /* background-color: yellow; */
+    /* color: red; */
+    /* margin-top: 80px; */
+    margin-left: 30px;
+    background-color: var(--primary-white);
+}
+
+.InfoAbout{
+    color: var(--primary-black);
+    font-size: 16px;
+    font-weight: 600;
+    margin: 10px 0px;
+}
+.InfoText{
+    width: 98%;
+    font-size: 16px;
+    color: var(--primary-black);
+
+}
+.InfoText a{
+   color: var(--secondary-red); 
+}
+.BillList ul li{
+    width: 95%;
+    margin-left: 20px;
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: var(--primary-black);
+}
+.DiscountB{
+    height: 80px;
+    width: 94%;
+    border-radius: 10px;
+    background-color: var(--secondary-red);
+}
+.DiscountBox{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 12px;
+    color: var(--secondary-white);
+}
+.DisHead{
+    color: var(--primary-white);
+    font-size: 16px;
+    font-weight: 600;
+}
+.DisText a{
+    color: var(--primary-white);
+    font-weight: 600;
+    
+}

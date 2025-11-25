@@ -3,7 +3,7 @@ import './Overview.css'
 
 const Overview = () => {
   return (
-    <div> 
+    <div className='Overview-main'> 
         <div className='leftArea'> 
          <section className="billing-section">
         <div className="billing-content">

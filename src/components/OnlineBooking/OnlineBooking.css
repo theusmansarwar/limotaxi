@@ -1,6 +1,5 @@
 .AccountsDashboard {
   width: 100%;
-  min-height: 100vh;
   background-color: var(--primary-gray);
   display: flex;
   flex-direction: column;
@@ -8,7 +7,7 @@
 
 .links {
   display: flex;
-  gap: 20px;
+  gap: 10;
    height: 50px;
    width: 100%;
   padding: 0;
@@ -28,26 +27,27 @@
 .links button:last-child {
   border-right: none;
 }
+
+ 
+
 .links button.active {
   color:  black;
   font-weight: 600;
   
 }
 
-.links button.active::after {
+/* .links button.active::after {
   content: '';
   position: absolute;
   bottom: -2px;
   left: 0;
   right: 0;
   height: 3px;
-  /* background-color: #c41e3a; */
-}
+  background-color: #c41e3a;
+} */
 
-.tabContent {
-  
+/* .tabContent {
   min-height: calc(100vh - 60px);
-  
-}
+} */
 
  

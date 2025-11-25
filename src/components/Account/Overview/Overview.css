@@ -7,6 +7,10 @@
   margin-top: 60px;
  
 }
+.Overview-main{
+  display: flex;
+  flex-direction: row;
+}
 .leftArea{
   width: 50%;
   color: var(--primary-white);

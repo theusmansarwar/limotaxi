@@ -1,6 +1,7 @@
 /* MAIN PAGE */
 .BillingPage {
   width: 95%;
+  margin-top: 70px;
   padding-left: 30px;
 }
 
@@ -38,7 +39,7 @@
 /* SCROLL BOX */
 .form-wrapper {
   width: 90%;
- margin-top: 10px;
+  margin: 10px 5%;
   padding: 15px;
   background: var(--secondary-white);
   border-radius: 15px;

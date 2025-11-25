@@ -1,0 +1,310 @@
+.taxicaller-container {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+ 
+}
+
+.header-nav {
+  background-color: #e8e8e8;
+  padding: 12px 30px;
+  font-size: 13px;
+  color: #666;
+}
+
+.nav-link {
+  color: #666;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-link.active {
+  color: var(--secondary-red);
+  font-weight: 600;
+}
+
+.nav-separator {
+  margin: 0 8px;
+  color: #999;
+}
+
+.main-content {
+  padding: 0px;
+  width: 100%;
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 0;
+  color: #000;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.link-text {
+  color: var(--secondary-red);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.two-column-layout {
+  background-color: var(--secondary-red);
+  padding: 20px;
+  padding-right: 50px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  margin-bottom: 0px;
+  border-radius: 2px;
+  width: 105%;
+  height: 379px;
+  margin-left: -10px;
+}
+
+
+.section-title {
+  color: #fff;
+  font-size: 16px;
+  margin-top: 0;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+.size-selector {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.size-label {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.size-dropdown {
+  padding: 8px 30px 8px 12px;
+  border-radius: 3px;
+  border: none;
+  font-size: 14px;
+  background-color: #fff;
+  cursor: pointer;
+  min-width: 150px;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 16px;
+}
+
+.email-notice {
+  color: #fff;
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+.email-link {
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.code-box {
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 20px;
+  height: 274px;
+  overflow-y: auto;
+}
+
+.code-content {
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  color: #333;
+  line-height: 1.6;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.preview-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  background-color: #e8e8e8;
+  padding: 30px;
+  border-radius: 2px;
+}
+
+.preview-box {
+  background-color: #f5f5f5;
+  padding: 20px;
+  border-radius: 2px;
+}
+
+.preview-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+}
+
+.preview-description {
+  font-size: 13px;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.mobile-preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+}
+
+.mobile-frame {
+  width: 100%;
+  max-width: 400px;
+}
+
+.booking-button {
+  background-color: #2d2d2d;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+  border-radius: 3px;
+}
+
+.booking-button h4 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  letter-spacing: 1px;
+  margin-top: 0;
+}
+
+.press-text {
+  color: #00d9ff;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}
+
+/* .icon-circle {
+  width: 70px;
+  height: 70px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.phone-icon svg {
+  filter: invert(1);
+} */
+.icon-circle {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-top:930px;
+  margin-right: 880px; */
+  /* margin: 0 auto; */
+}
+
+.phone-icon svg {
+  display: block;
+}
+
+.phone-icon svg rect,
+.phone-icon svg line {
+  stroke: #000 !important; 
+}
+
+.computer-preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+}
+
+.computer-frame {
+  width: 180px;
+  /* max-width: 250px; */
+  background-color: #2d2d2d;
+  padding: 20px;
+  border-radius: 3px;
+  height: 232px;
+}
+
+.booking-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #444;
+}
+
+.booking-title {
+  color: #fff;
+  font-size: 8px;
+  text-align: center;
+  margin-top: 80px;
+  font-weight: 700;
+  margin-left: 22px;
+  letter-spacing: 1px;
+}
+
+.info-icon {
+  width: 24px;
+  height: 24px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  color: #2d2d2d;
+}
+
+@media (max-width: 968px) {
+  .two-column-layout {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .preview-section {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .main-content {
+    padding: 20px;
+  }
+  
+  .two-column-layout {
+    padding: 20px;
+  }
+  
+  .preview-section {
+    padding: 20px;
+  }
+}

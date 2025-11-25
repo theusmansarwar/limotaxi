@@ -238,10 +238,10 @@ export const adminMenuItems = [
     icon: BookOpen,
     children: [
       { 
-        id: "active-bookings", 
-        label: "Active Bookings", 
+        id: "Online-booking", 
+        label: "Online Booking", 
         icon: BookOpen,
-        path: "/admin/active-bookings" 
+        path: "/admin/online-booking" 
       },
       { 
         id: "completed-bookings", 

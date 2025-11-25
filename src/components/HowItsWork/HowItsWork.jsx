@@ -1,7 +1,8 @@
 import React from 'react'
-import './HowWorks.css'
-const HowWorks = () => {
+import './HowItsWork.css'
+const HowItsWork = () => {
   return (
+    <div className='InformP'>
     <div className='InfoPage'>
       <p className='InfoAbout'>INFORMATION ABOUT MONTHLY FEES</p>
       <p className='InfoText'>
@@ -69,8 +70,8 @@ const HowWorks = () => {
       </div>
       </div>
     </div>
-   
+    </div>
   )
 }
 
-export default HowWorks
+export default HowItsWork

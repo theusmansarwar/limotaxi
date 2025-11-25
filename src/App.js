@@ -13,6 +13,7 @@ import { Route, Routes, Navigate } from 'react-router-dom';
 import DispatchDashboard from './pages/dispatchsDashboard/DispatchDashboard';
 import AdminDashboard from './pages/adminDashboard/AdminDashboard';
 import Account from './components/Account/Account';
+import OnlineBooking from './components/OnlineBooking/OnlineBooking';
 
 function App() {
   const [activeSidebar, setActiveSidebar] = useState("dispatch");
@@ -81,7 +82,7 @@ function App() {
             <Route path="/admin/settings" element={<div className="page-content"><h1>Settings</h1></div>} />
             
          
-            <Route path="/admin/active-bookings" element={<div className="page-content"><h1>Active Bookings</h1></div>} />
+            <Route path="/admin/online-booking" element={<div className="page-content"><OnlineBooking/></div>} />
             <Route path="/admin/completed-bookings" element={<div className="page-content"><h1>Completed Bookings</h1></div>} />
 
          

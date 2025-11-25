@@ -1,11 +1,10 @@
- import React, { useState } from "react";
+import { React, useState } from "react";
 import "./Account.css";
 import { IoMdArrowDropdown } from "react-icons/io";
-
-// import your components
 import Overview from "./Overview/Overview";
 import Billing from "./Billing/Billing";
-import Work from "./HowWorks/HowWorks";
+import HowWorks from "./HowWorks/HowWorks";
+
 
 const Account = () => {
   const [activeTab, setActiveTab] = useState("overview");
@@ -24,25 +23,23 @@ const Account = () => {
           className={activeTab === "billing" ? "active" : ""}
           onClick={() => setActiveTab("billing")}
         >
-          Your Billing Information
+          Your billing information
         </button>
 
         <button
           className={activeTab === "work" ? "active" : ""}
           onClick={() => setActiveTab("work")}
         >
-          How it Works
+          How it works
         </button>
       </div>
 
-      {/* Show Components Dynamically */}
       <div className="tabContent">
         {activeTab === "overview" && <Overview />}
         {activeTab === "billing" && <Billing />}
-        {activeTab === "work" && <Work />}
+        {activeTab === "work" && <HowWorks />}
       </div>
     </div>
   );
 };
-
 export default Account;
