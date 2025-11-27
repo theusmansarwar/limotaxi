@@ -63,12 +63,7 @@
   background: rgba(0, 0, 0, 0.15);
 }
 
-/* .sub-sidebar-menu > li.active > .menu-items {
-  background:black;
-  font-weight: 500;
-} */
-
-/* Parent ACTIVE — same as screenshot white rounded pill */
+ 
 .sub-sidebar-menu > li.active > .menu-items {
   background: #1e1e1e;
   font-weight: 500;
@@ -76,8 +71,6 @@
   margin: 3px 8px;
 }
 
-
-/* Parent dropdown vertical line */
 li.active ul.submenu {
   position: relative;
 }
@@ -113,7 +106,6 @@ li.active ul.submenu::before {
   opacity: 1;
 }
 
-/* Submenu Styles */
 .submenu {
   list-style: none;
   background: rgba(0, 0, 0, 0.12);
