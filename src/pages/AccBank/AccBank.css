@@ -9,29 +9,30 @@
 .links {
   display: flex;
   gap: 20px;
-   height: 50px;
-   width: 100%;
+  height: 50px;
+  width: 100%;
   padding: 0;
   margin: 0;
 }
 
 .links button {
- 
+  position: relative; /* underline ka issue fix */
   background-color: var(--primary-gray);
   cursor: pointer;
   font-size: 14px;
   font-weight: 600;
   color: var(--secondary-red);
   border: none;
+  padding: 5px 0; /* halka clickable area – look same rahega */
 }
 
 .links button:last-child {
   border-right: none;
 }
+
 .links button.active {
-  color:  black;
+  color: black;
   font-weight: 600;
-  
 }
 
 .links button.active::after {
@@ -41,11 +42,9 @@
   left: 0;
   right: 0;
   height: 3px;
-  /* background-color: #c41e3a; */
+  background-color: black; /* tumne comment kiya hua tha */
 }
 
 .tabContent {
   min-height: calc(100vh - 60px);
 }
-
- 

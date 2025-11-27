@@ -14,21 +14,29 @@ import DispatchDashboard from './pages/dispatchsDashboard/DispatchDashboard';
 import AdminDashboard from './pages/adminDashboard/AdminDashboard';
 import Account from './components/Account/Account';
 import OnlineBooking from './components/OnlineBooking/OnlineBooking';
+import AccBank from './pages/AccBank/AccBank';
 
 function App() {
   const [activeSidebar, setActiveSidebar] = useState("dispatch");
 
   return (
     <div className="app-container">
-      <Header />
-
-      <div className="app-layouts">
-
-        <div className="left-sides">
-          <Sidebar  className="main-sidebar-area "
+      <div  className="main-sidebar-area "> 
+      <Sidebar  
             setActiveSidebar={setActiveSidebar} 
             activeSidebar={activeSidebar} 
           />
+      </div>
+
+      <div className="app-layouts">
+
+        <div className=''>
+          <Header />
+        </div>
+
+         <div className='main-sub-area'> 
+        <div className="left-sides">
+           
           {activeSidebar === "dispatch" && (
             <SubSidebar className="sub-sidebar-area "
               menuItems={dispatchMenuItems} 
@@ -77,6 +85,7 @@ function App() {
             <Route path="/admin/booking-history" element={<Reports />} />
             <Route path="/admin/payment-history" element={ <Payment />}/>
             <Route path="/admin/billing" element={ <Account />}/>
+            <Route path="/admin/bank" element={ <AccBank />}/>
          
             <Route path="/admin/profile" element={<div className="page-content"><h1>Profile</h1></div>} />
             <Route path="/admin/settings" element={<div className="page-content"><h1>Settings</h1></div>} />
@@ -92,6 +101,7 @@ function App() {
             <Route path="*" element={<div className="page-content"><h1>404 - Page Not Found</h1></div>} />
           </Routes>
         </div>
+        </div> 
       </div>
     </div>
   );

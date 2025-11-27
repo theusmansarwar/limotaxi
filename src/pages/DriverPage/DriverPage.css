@@ -1,0 +1,92 @@
+.DriverPage{
+    margin-left: 20px;
+    height: 800px;
+    width: 100%;
+}
+.DriveH{
+    font-size: 16px;
+    font-weight: 600;
+}
+.DriverText{
+    width: 95%;
+    margin-top: 20px;
+    font-size: 16px;
+}   
+.WarningBox{
+    height: 70px;
+    width: 95%;
+    background-color: var(--secondary-yellow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    border-radius: 12px;
+    margin-top: 20px;
+    gap: 5px;
+}
+.Warn{
+    color: var(--primary-black);
+    font-size: 16px;
+    font-weight: 600;
+}
+.WarnT{
+    font-size: 16px;
+}
+.filedBox{
+  width: 92%;
+ 
+   margin-top: 40px;
+   margin-left: 10px;
+}
+.fieldRow {
+
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 80px;
+}
+.inputBox {
+  width: 48%;
+}
+.innerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.innerRow label {
+  width: 180px;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--primary-black);
+}
+.innerRow input,
+.innerRow select {
+  width: 100%;
+  max-width: 250px; 
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  outline: none;
+}
+.InputText {
+  font-size: 12px;
+  color: var(--touch-gray);
+  margin-top: 6px;
+}
+.centerButton {
+  text-align: center;
+  margin-top: 20px;
+}
+.createBtn {
+  background: var(--primary-red);
+  padding: 10px 35px;
+  border-radius: 6px;
+  color: var(--secondary-white);
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+}
+.createBtn:hover {
+    background-color: var(--secondary-red);
+}

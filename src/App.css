@@ -1,5 +1,5 @@
-/* COLOR VARIABLES (from user input) */
-:root {
+ 
+  :root{
   --primary-red: #A10020;
   --secondary-red: #BB0025;
   --primary-white: #E8E8E8;
@@ -7,14 +7,22 @@
   --primary-black: #000000;
   --secondary-black: #1D1D28;
   --secondary-blue: #272736;
+  /* --secondary-gray: #1D1B20; */
   --secondary-gray: #CDCDCD;
   --primary-gray:#EAEAEA;
   --touch-gray:#9F9F9F;
+  --lightest-gray:#bcbcbc;
+  --lighter-gray:#cacaca;
   --primary-green: #1B880D;
   --primary-yellow: #EA9800;
+  --secondary-yellow: #E1A325;
+  --light-gray: #DBDBDB;
+  --light-graynish:#B2B2B2;
+  --dark-graynish: #363636;
+  --dark-gray:#9F9F9F;
+  --light-black: #5B5B5B;
+  
 }
-
- 
 * {
   margin: 0;
   padding: 0;
@@ -25,16 +33,22 @@ body {
   overflow-x: hidden;
   font-family: "Poppins", sans-serif;
   background-color: var(--primary-gray);  
+  overflow-y: hidden;
+  height: 100vh;
+}
+.main-sidebar-area{
+  height: 101vh;
 }
 
- 
 .app-container {
   display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+ 
 }
 
- 
+.main-sub-area{
+  display: flex;
+  height: calc(100vh - 78px);
+}
 header {
   height: 80px;  
   position: sticky;
@@ -42,36 +56,22 @@ header {
   z-index: 100;
   background-color: var(--secondary-white);
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  margin-bottom: 10px;
 }
 
- 
 .app-layouts {
-  display: flex;
-  flex: 1; 
-  width: 100%;
-  overflow-x: hidden; 
+    width: 94%;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
 }
 
  
 .left-sides {
   display: flex;  
-  width: 17%; 
+  width: 15%; 
   flex-shrink: 0;  
-  background: var(--secondary-white);
-  
- 
-  position: sticky; 
-  top: 80px;  
-  height: calc(100vh - 80px); 
+  background: var(--secondary-white); 
   overflow-y: auto; 
-}
-
- 
-.main-sidebar-area {
-  width: 40%;  
-  flex-shrink: 0;
-  border-right: 1px solid var(--primary-gray);
 }
 
 .sub-sidebar-area {
@@ -80,16 +80,12 @@ header {
   flex-shrink: 0;
 }
 
-
- 
 .right-sides {
   width: 70%;  
   display: flex;
   flex-direction: column;
   flex: 1; 
-   
-  min-height: calc(100vh - 80px); 
-  padding: 24px  14px; 
+  padding: 10px  14px; 
   overflow-y: auto;
   overflow-x: hidden;
   background-color: var(--primary-gray);  
@@ -110,7 +106,6 @@ header {
   padding: 15px;
 }
 
- 
 @media (max-width: 1200px) {
   .app-layouts {
     flex-direction: column;

@@ -7,15 +7,11 @@
 }
  
 .sub-sidebar {
-  width: 180px;
+  width: 100%;
   background:  #970D1A;
   color: white;
-  height: calc(100vh - 80px);
   overflow-y: auto;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  margin-left: 85px;
-  top: 80px;
-  position: fixed;
   padding-top: 20px;
 }
 
@@ -50,8 +46,6 @@
   background: transparent;
 }
 
-
-
 .menu-item-contents {
   display: flex;
   align-items: center;
@@ -69,10 +63,35 @@
   background: rgba(0, 0, 0, 0.15);
 }
 
-.sub-sidebar-menu > li.active > .menu-items {
+/* .sub-sidebar-menu > li.active > .menu-items {
   background:black;
   font-weight: 500;
+} */
+
+/* Parent ACTIVE — same as screenshot white rounded pill */
+.sub-sidebar-menu > li.active > .menu-items {
+  background: #1e1e1e;
+  font-weight: 500;
+  border-radius: 6px;
+  margin: 3px 8px;
 }
+
+
+/* Parent dropdown vertical line */
+li.active ul.submenu {
+  position: relative;
+}
+
+li.active ul.submenu::before {
+  content: "";
+  position: absolute;
+  left: 25px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(255, 255, 255, 0.35);
+}
+
  
 .has-dropdown {
   user-select: none;
@@ -117,6 +136,17 @@
   }
 }
 
+/* Child normal */
+.submenu li .menu-items {
+  padding-left: 2.4rem;
+  opacity: 0.85;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.submenu li:hover .menu-items {
+  background: rgba(255, 255, 255, 0.1);
+}
+
 .submenu li {
   margin: 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
@@ -145,13 +175,13 @@
 }
 
 .submenu li.active .menu-items {
-  background:black;
-  font-weight: 500;
-  border-left: 3px solid rgba(255, 255, 255, 0.9);
-  padding-left: 2.56rem;
+  background: transparent;
+  color: black;
+  font-weight: bolder;
+  font-size: larger;
+  padding-left: 2.6rem;
 }
 
-/* Scrollbar Styling */
 .sub-sidebar::-webkit-scrollbar {
   width: 6px;
 }
@@ -169,7 +199,6 @@
   background: rgba(255, 255, 255, 0.4);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .sub-sidebar {
     width: 100%;
@@ -177,7 +206,6 @@
   }
 }
 
-/* Icon Sizing */
 .menu-item-contents svg {
   flex-shrink: 0;
   opacity: 0.95;

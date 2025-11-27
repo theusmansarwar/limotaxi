@@ -1,0 +1,342 @@
+.driver-main{
+    width: 99%;
+    margin-top: 80px;
+    margin-left: 40px;
+}
+.Dhead{
+    font-size: 16px;
+    font-weight: 600;
+}
+.top-controls{
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 20px;
+    /* background-color: yellow; */
+    color: var(--primary-black);
+    font-size: 14px;
+    font-weight: 600;
+}
+.top-controls input{
+    margin-left: 5px;
+    padding: 2px 4px;
+    border-radius: 4px;
+    border: 1px solid var(--touch-gray);
+  
+}
+.MinFunds{
+    display: flex;
+    align-items: center;
+  gap: 6px;
+  
+}
+.minFunds-row{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    background: var(--dark-gray);
+    padding: 2px 1px;
+    border-radius: 6px;
+    color: var(--secondary-white);
+    font-size: 14px;
+    font-weight: 400;
+   
+}
+.minFunds-row span{
+    margin-left: 5px;
+}
+
+.minFunds-row input{
+    width: 130px;
+    padding: 4px;
+    border-radius: 4px;
+    border: 1px solid var(--light-gray);
+}
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.SourceForm, .TraseferTo {
+  display: flex;
+  align-items: center;
+ 
+}
+   
+input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding-right: 4px; /* space for the icon */
+  height: 28px;
+  box-sizing: border-box;
+  border: 2px solid var(--touch-gray);
+  
+}
+
+.icon0 {
+  position: absolute; /* place inside input */
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--primary-black);
+  /* background-color: yellow; */
+  pointer-events: none; /* so clicks go to input */
+}
+
+
+/* Title + Create Button */
+.charge-header{
+    margin-top: 20px;
+    display: flex;
+   flex-direction: column;
+
+    font-weight: bold;
+}
+
+.create-btn{
+    background: var(--secondary-red);
+    color: var(--secondary-white);
+    padding: 8px 14px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    width: 12%;
+    margin-top: 10px;
+}
+.create-btn:hover{
+    opacity:0.90
+}
+
+/* Rule Cards */
+.rules-grid{
+    margin-top: 10px;
+    display: grid;
+     grid-template-columns: repeat(3, 1fr);
+    gap: 0px;
+}
+
+.rule-card{
+    background: var(--light-graynish);
+    border-radius: 8px;
+    padding: 2px;
+    width:260px;
+    margin-top: 25px;
+}
+
+.card-top{
+    display:flex;
+    justify-content:flex-end;
+    margin-top: 5px;
+    gap:5px;
+    margin-bottom:5px;
+    cursor:pointer;
+}
+.card-top span{
+    color: var(--primary-black);
+    font-size: 18px;
+    font-weight: 600;
+}
+table{
+    width:100%;
+    border-collapse:collapse;
+    font-size:14px;
+}
+
+th{
+    background: var(--dark-graynish);
+    color: var(--secondary-white);
+    padding:6px;
+    text-align:left;
+    width:50%;
+    border-bottom: 1px solid var(--light-graynish);
+     border-right: 2px solid var(--light-graynish);
+    font-weight: 100;
+}
+
+td{
+    background: var(--dark-graynish);
+    color: var(--secondary-white);
+    padding:6px;
+     border-bottom: 1px solid var(--light-graynish);
+     font-weight: 100;
+}
+
+
+/* Background Overlay */
+.popup-overlay {
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: rgba(0,0,0,0.5);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index: 9999;
+ 
+}
+
+/* Popup Container */
+.popup-box {
+  width: 700px;
+  background: var(--dark-graynish);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+/* Red Header */
+.popup-top {
+  background: var(--secondary-red);
+  padding: 14px 20px;
+  color: var(--secondary-white);
+  font-size: 16px;
+  font-weight: 600;
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+}
+
+.popup-close {
+  font-size: 22px;
+  cursor:pointer;
+}
+
+/* Popup Body */
+.popup-body {
+  padding: 25px;
+}
+
+/* Two Columns */
+.popup-row {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 20px;
+}
+
+.popup-field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  color: var(--secondary-white);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.popup-field label {
+  margin-bottom: 6px;
+}
+
+/* Dropdown Box (Gray input with arrow) */
+.dropdown-box {
+  position: relative;
+}
+
+.dropdown-box input {
+  width: 90%;
+  padding: 7px 35px 7px 10px;
+  background: var(--secondary-white);
+  border: none;
+  border-radius: 4px;
+}
+
+.popup-icon {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--primary-black);
+  font-size: 20px;
+}
+
+/* Amount Box */
+.amount-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--secondary-white);
+  padding: 7px 35px 7px 10px;
+  border-radius: 4px;
+  width: 90%;
+ 
+ 
+}
+
+.amount-box span {
+  color: var(--secondary-white);
+   background-color: var(--touch-gray);
+   padding: 4px 14px;
+   border-radius: 4px;
+}
+
+.amount-box input {
+  border: none;
+  background: transparent;
+  width: 100%;
+
+}
+.amount-box input:focus {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Description */
+.desc-input {
+  padding: 8px 10px;
+  background: var(--secondary-white);
+  border: none;
+  border-radius: 4px;
+  width: 100%;
+}
+
+/* Buttons */
+.popup-buttons {
+  display:flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 30px;
+  
+}
+
+.cancel-btn {
+  background: var(--primary-black);
+  color: var(--secondary-white);
+  padding: 8px 26px;
+  border: none;
+  font-size: 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.save-btn {
+  background: var(--secondary-red);
+  color: var(--secondary-white);
+  padding: 8px 26px;
+  border:none;
+  border-radius: 4px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.cancel-btn:hover{
+opacity: 0.78;
+
+} 
+.save-btn:hover{
+opacity: 0.88;
+}
+.error-input {
+  border: 1px solid var(--primary-red) !important;
+  background-color: #ffe6e6 !important;
+}

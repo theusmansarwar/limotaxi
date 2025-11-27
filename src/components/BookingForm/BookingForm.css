@@ -6,8 +6,8 @@ body {
 .booking-container {
   width: 420px;
   max-height: 90vh; 
-  margin: 30px auto;
-  margin-top: 40px;
+ 
+ 
   overflow-y: auto; 
   overflow-x: hidden;
   padding-right: 10px;

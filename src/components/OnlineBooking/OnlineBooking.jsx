@@ -1,39 +1,28 @@
-import { React, useState } from "react";
-import "./OnlineBooking.css";
-import { IoMdArrowDropdown } from "react-icons/io";
- import BookingApp from "../BookingApp/BookingApp";
- import TaxiCallerEmbed from "../TaxiCaller/TaxiCallerEmbed";
-// import Billing from "./Billing/Billing";
-// import Work from "./HowWorks/HowWorks";
-
+import React from "react";
+import Tabs from "../Tabs/Tabs"; 
+import BookingApp from "../BookingApp/BookingApp";
+import TaxiCallerEmbed from "../TaxiCaller/TaxiCallerEmbed";
+import "./OnlineBooking.css" 
 
 const OnlineBooking = () => {
-  const [activeTab, setActiveTab] = useState("bookingApp");
+  const onlineBookingTabs = [
+    {
+      id: "bookingApp",
+      label: "Settings",
+      component: <BookingApp />,
+    },
+    {
+      id: "taxiCallerEmbed",
+      label: "Embed web form",
+      component: <TaxiCallerEmbed />,
+    },
+  ];
 
   return (
     <div className="AccountsDashboard">
-      <div className="links">
-        <button
-          className={activeTab === "bookingApp" ? "active" : ""}
-          onClick={() => setActiveTab("bookingApp")}
-        >
-          Settings
-        </button>
-
-        <button
-          className={activeTab === "taxiCallerEmbed" ? "active" : ""}
-          onClick={() => setActiveTab("taxiCallerEmbed")}
-        >
-          Embed web form 
-        </button>
-
-      </div>
-
-      <div className="tabContent">
-        {activeTab === "bookingApp" && <BookingApp />}
-        {activeTab === "taxiCallerEmbed" && <TaxiCallerEmbed />} 
-      </div>
+      <Tabs tabs={onlineBookingTabs} />
     </div>
   );
 };
+
 export default OnlineBooking;
