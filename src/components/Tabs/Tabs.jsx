@@ -3,16 +3,13 @@ import "./Tabs.css";
 
 const Tabs = ({ tabs, className = "" }) => {
   const [activeTab, setActiveTab] = useState(tabs[0]?.id);
-
-  // find active parent tab object
+ 
   const activeParent = tabs.find((t) => t.id === activeTab);
 
-  // state for sub tabs (if exists)
   const [activeSubTab, setActiveSubTab] = useState(
     activeParent?.subTabs?.[0]?.id || null
   );
 
-  // update sub-tab when parent changes
   const handleParentClick = (id) => {
     setActiveTab(id);
 
@@ -26,8 +23,7 @@ const Tabs = ({ tabs, className = "" }) => {
 
   return (
     <div className={`TabsContainer ${className}`}>
-
-      {/* ------------ Parent Tabs ------------- */}
+ 
       <div className="links">
         {tabs.map((tab) => (
           <button
@@ -54,9 +50,7 @@ const Tabs = ({ tabs, className = "" }) => {
         </div>
       )}
 
-      {/* ------------ Content Area ------------- */}
       <div className="tabContent">
-        {/* If Sub tabs exist → show sub tab content */}
         {activeParent?.subTabs?.length > 0 ? (
           activeParent?.subTabs?.map((sub) =>
             activeSubTab === sub.id ? (
@@ -64,7 +58,6 @@ const Tabs = ({ tabs, className = "" }) => {
             ) : null
           )
         ) : (
-          /* Otherwise show parent content */
           <div>{activeParent?.component}</div>
         )}
       </div>
