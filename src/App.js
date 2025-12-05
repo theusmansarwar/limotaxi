@@ -53,7 +53,7 @@ function App() {
 
         <div className='right-sides'>
           <Routes>
-            <Route path="/" element={<Navigate to="/dispatch/dashboard" replace />} />
+            {/* <Route path="/" element={<Navigate to="/dispatch/dashboard" replace />} /> */}
 
             <Route path="/dispatch/dashboard" element={<DispatchDashboard />} />
             <Route path="/dispatch/jobs" element={<div className="page-content"><h1>Jobs Overview</h1></div>} />
