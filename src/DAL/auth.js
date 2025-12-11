@@ -37,6 +37,15 @@ export const forgotPassword = async (formData) => {
   };
   return invokeApi(reqObj);
 };
+export const resetPassword = async (formData) => {
+  const reqObj = {
+    path: "/auth/reset-password",
+    method: "POST",
+    headers: {},
+    postData: formData,
+  };
+  return invokeApi(reqObj);
+};
 
 
 export const logout = async () => {

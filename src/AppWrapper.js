@@ -5,6 +5,8 @@ import Login from "./pages/Auth/Login";
 import Register from "./pages/Auth/Register";
 import Verify from "./pages/Auth/Verify";
 import ForgotPassword from "./pages/Auth/ForgotPassword";
+import ResetPassword from "./pages/Auth/ResetPassword";
+import { ToastContainer } from "react-toastify";
 
 function AppWrapper() {
   const navigate = useNavigate();
@@ -15,22 +17,27 @@ function AppWrapper() {
 
   const [message, setMessage] = useState({ type: "", text: "" });
 
-useEffect(() => {
-  const token = localStorage.getItem("token");
-  const path = window.location.pathname;
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    const path = window.location.pathname;
 
-  const publicRoutes = ["/login", "/register", "/verify", "/forgot"];
+    const publicRoutes = [
+      "/login",
+      "/register",
+      "/verify",
+      "/forgot-password",
+      "/reset-password",
+    ];
 
-  if (!token && !publicRoutes.includes(path)) {
-    setIsAuthenticated(false);
-    navigate("/login", { replace: true });
-  } else if (token) {
-    setIsAuthenticated(true);
-  }
-}, [navigate]);
+    if (!token && !publicRoutes.includes(path)) {
+      setIsAuthenticated(false);
+      navigate("/login", { replace: true });
+    } else if (token) {
+      setIsAuthenticated(true);
+    }
+  }, [navigate]);
 
-
-  //  After successful login
+  //  After successful loginn
   const handleLoginSuccess = () => {
     localStorage.setItem("token", "true");
     setIsAuthenticated(true);
@@ -50,28 +57,38 @@ useEffect(() => {
   };
 
   return (
-    <Routes>
-      {/* Login always accessible */}
-      <Route
-        path="/login"
-        element={<Login onLoginSuccess={handleLoginSuccess} />}
+    <>
+      <ToastContainer
+        position="top-right"
+        autoClose={2000}
+        pauseOnHover={false}
+        newestOnTop
       />
-      <Route path="/register" element={<Register />} />
-      <Route path="/verify" element={<Verify />} />
-      <Route path="/forgot-password" element={<ForgotPassword />} />
 
-      {/* Protected App */}
-      <Route
-        path="/*"
-        element={
-          isAuthenticated ? (
-            <App onLogout={handleLogout} message={message} />
-          ) : (
-            <Navigate to="/login" replace />
-          )
-        }
-      />
-    </Routes>
+      <Routes>
+        
+        <Route
+          path="/login"
+          element={<Login onLoginSuccess={handleLoginSuccess} />}
+        />
+        <Route path="/register" element={<Register />} />
+        <Route path="/verify" element={<Verify />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/reset-password" element={<ResetPassword />} />
+
+        {/* Protected App */}
+        <Route
+          path="/*"
+          element={
+            isAuthenticated ? (
+              <App onLogout={handleLogout} message={message} />
+            ) : (
+              <Navigate to="/login" replace />
+            )
+          }
+        />
+      </Routes>
+    </>
   );
 }
 

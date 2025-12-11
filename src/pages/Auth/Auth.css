@@ -105,7 +105,6 @@
   flex-direction: column;
   align-items: center;
   gap: 16px;
-
 }
 .register-form {
   display: flex;
@@ -115,19 +114,13 @@
   margin-top: 20px;
 }
 
-.verify-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-
-}
+.verify-form,
+.reset-form,
 .forgot-form {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
-
 }
 
 .row {
@@ -145,18 +138,16 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;   
+  align-items: center;
 }
 
-
 .error-msg {
-  width: 100%;            
-  text-align: left;     
+  width: 100%;
+  text-align: left;
   margin-bottom: 3px;
   color: red;
   font-size: 11px;
 }
-
 
 /* ================= LOGIN INPUT STYLE ================= */
 

@@ -150,7 +150,7 @@ const Login = ({ onLoginSuccess }) => {
               navigate("/forgot-password");
             }}
           >
-            Forget your Password?
+            Forgot Password?
           </div>
 
           <button

@@ -23,7 +23,7 @@ const ForgotPassword = () => {
       const res = await forgotPassword(formData);
 
       if (res?.status === 200) {
-        navigate("/verify", { state: { email: formData.email } });
+        navigate("/reset-password", { state: { email: formData.email } });
       } else if (res?.status === 400 && res?.missingFields) {
         const fieldErrors = {};
         res.missingFields.forEach((field) => {
@@ -49,7 +49,7 @@ const ForgotPassword = () => {
   return (
     <div className="AuthPage">
       <div className="AuthPage-Right">
-        <p>Hello, Friends</p>
+        <h2>Hello, Friends</h2>
         <p>Enter your personal details</p>
         <p>and strat journy with us.</p>
 
